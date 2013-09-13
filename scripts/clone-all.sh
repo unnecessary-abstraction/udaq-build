@@ -15,7 +15,7 @@ git clone -b dylan git://git.openembedded.org/meta-openembedded.git \
 git clone -b dylan git://git.yoctoproject.org/meta-yocto.git \
 	oe-udaq/meta-yocto
 
-git clone git://bitbucket.org/underwater-acoustics/meta-udaq.git \
+git clone https://bitbucket.org/underwater-acoustics/meta-udaq.git \
 	oe-udaq/meta-udaq
 
 # We need a symlink to bitbake within the openembedded-core directory
