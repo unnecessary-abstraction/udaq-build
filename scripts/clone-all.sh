@@ -3,7 +3,7 @@ set -e
 
 # Clone necessary layers (at the dylan branch where appropriate)
 mkdir -p oe-udaq
-git clone git://git.openembedded.org/bitbake.git \
+git clone -b 1.18 git://git.openembedded.org/bitbake.git \
 	oe-udaq/bitbake
 
 git clone -b dylan git://git.openembedded.org/openembedded-core.git \
