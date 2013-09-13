@@ -8,7 +8,7 @@ cd oe-udaq/openembedded-core
 source oe-init-build-env ../../build
 
 # Build everything, continuing on error and producing a log file
-bitbake -k kitchen-sink | tee bitbake-${DATE}.log
+bitbake -k kitchen-sink udaq-image | tee bitbake-${DATE}.log
 xz bitbake-${DATE}.log
 
 # Ensure the package feed is up-to-date
