@@ -13,10 +13,10 @@ DATE=`date -u "+%Y%m%d%H%M%S"`
 mkdir -p {deploy,staging}/{feed,images,sources,oe}
 
 # First we copy all changed files to a staging directory
-rsync -av --compare-dest="deploy/feed" build/tmp/deploy/ipk/ staging/feed/
-rsync -av --compare-dest="deploy/images" build/tmp/deploy/images/ staging/images/
-rsync -av --compare-dest="deploy/sources" --exclude="*.done" --exclude="/git2" \
-	--exclude="/hg" --exclude="/svn" downloads staging/sources/
+rsync -av --compare-dest="../../deploy/feed" build/tmp/deploy/ipk/ staging/feed/
+rsync -av --compare-dest="../../deploy/images" build/tmp/deploy/images/ staging/images/
+rsync -av --compare-dest="../../deploy/sources" --exclude="*.done" --exclude="/git2" \
+	--exclude="/hg" --exclude="/svn" build/downloads/ staging/sources/
 
 # Capture the yocto source tree
 rsync -av --exclude=".git" oe-udaq oe-udaq_${DATE}
