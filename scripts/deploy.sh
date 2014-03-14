@@ -19,7 +19,7 @@ rsync -av --compare-dest="../../deploy/sources" --exclude="*.done" --exclude="/g
 	--exclude="/hg" --exclude="/svn" build/downloads/ staging/sources/
 
 # Capture the yocto source tree
-rsync -av --exclude=".git" oe-udaq oe-udaq_${DATE}
+rsync -av --exclude=".git" oe-udaq/ oe-udaq_${DATE}
 tar cvJf staging/oe/oe-udaq_${DATE}.tar.xz oe-udaq_${DATE}
 rm -rf oe-udaq_${DATE}
 
