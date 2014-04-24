@@ -25,7 +25,7 @@ tar cvJf staging/oe/oe-udaq_${DATE}.tar.xz oe-udaq_${DATE}
 rm -rf oe-udaq_${DATE}
 
 # Sign everything in the staging directory
-find staging -type f -exec gpg -sab {} \;
+#find staging -type f -exec gpg -sab {} \;
 
 # Merge into deployment directory
 rsync -av staging/ deploy/
